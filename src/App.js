@@ -16,7 +16,7 @@ class App extends Component {
 
   onInputChange = ({target}) => {
     const { value } = target;
-    this.setState({value});
+    this.setState({value: value});
   };
 
   onKeyPress = ({charCode}) => {
