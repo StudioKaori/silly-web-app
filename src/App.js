@@ -7,6 +7,7 @@ class App extends Component {
 
     this.state = {
       value: '',
+      lastKeyPress: '',
     };
   }
 
@@ -15,8 +16,10 @@ class App extends Component {
     this.setState({value: value});
   };
 
-  onKeyPress = ({charCode}) => {
-    console.log(String.fromCharCode(charCode));
+  onKeyPress = ({ charCode }) => {
+    const lastKeyPress = String.fromCharCode(charCode);
+    console.log(lastKeyPress);
+    this.setState({ lastKeyPress: lastKeyPress });
   }
 
   render() {
